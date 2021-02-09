@@ -1,0 +1,34 @@
+body {
+  background-image: linear-gradient(to bottom, #e8ffff, #eeeeee);
+}
+
+@media only screen and (min-width: 768px) {
+  .full-h {
+    min-height: 100vh;
+  }
+}
+
+.btn-primary {
+  background-color: #0d7377;
+  border: 0;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.btn-primary,
+.btn-link {
+  padding: 15px 30px;
+}
+
+.btn-primary:hover {
+  background-color: #32e0c4;
+  color: #212121;
+}
+
+.btn-link {
+  color: #0d7377;
+}
+
+.btn-link:hover {
+  color: #0d7377;
+}

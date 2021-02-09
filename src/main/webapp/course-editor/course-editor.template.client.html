@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Manager | Editor</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="course-editor.style.client.css">
+</head>
+<body>
+  <div class="container-fluid d-flex align-items-center justify-content-between pt-3 pb-3 mb-5">
+    <a class="navbar-brand" href="/">Course<br><span class="c-teal-light d-block ml-4">Manager</span></a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link pb-3" href="/login/login.template.client.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pb-3" href="/register/register.template.client.html">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pb-3" href="/profile/profile.template.client.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pb-3" href="/course-list/course-list.template.client.html">Course List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pb-3 active" href="/course-editor/course-editor.template.client.html">Course Editor</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <main>
+
+    <div class="container container-sm mb-5">
+        <h1 class="text-center">CS5610 - Web Development</h1>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-4 mb-5 mb-md-0">
+          <h4 class="mb-3">Modules</h4>
+          <ul class="list-group">
+            <li class="d-flex align-items-center justify-content-between list-group-item">
+              Module 1 <button class="btn btn-edit">Edit</button>
+            </li>
+            <li class="d-flex align-items-center justify-content-between list-group-item is-selected">
+              Selected Module 2 <button class="btn btn-edit">Edit</button>
+            </li>
+            <li class="d-flex align-items-center justify-content-between list-group-item">
+              Module 3 <button class="btn btn-edit">Edit</button>
+            </li>
+            <li class="d-flex align-items-center justify-content-between list-group-item">
+              Module 4 <button class="btn btn-edit">Edit</button>
+            </li>
+            <li class="d-flex align-items-center justify-content-between list-group-item">
+              Module 5 <button class="btn btn-edit">Edit</button>
+            </li>
+            <li class="d-flex align-items-center justify-content-between list-group-item is-selected is-editing">
+              Editing Module 6...
+              <div class="d-flex">
+                <button class="btn btn-okay">Confirm</button>
+                <button class="btn btn-delete">&times;</button>
+              </div>
+            </li>
+            <li class="d-flex align-items-center justify-content-between list-group-item">
+              <form class="d-flex align-items-center w-100">
+                <input class="form-control form-control-add" type="text" placeholder="Add a new module" aria-label="New Course Name">
+                <button class="btn btn-add ml-2" type="submit">+</button>
+              </form>
+            </li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-8">
+          <ul class="nav nav-tabs nav-tabs-editor mb-3">
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center is-selected is-editing" href="#">Editing Section
+                <button class="btn btn-okay ml-2">Confirm</button>
+                <button class="btn btn-delete">&times;</button>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="#">Module Section<button class="btn btn-edit ml-2">Edit</button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center is-selected" href="#">Selected Section<button class="btn btn-edit ml-2">Edit</button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="#">
+                Add section <button class="btn btn-add ml-2" type="submit">+</button>
+              </a>
+            </li>
+          </ul>
+          <!-- Topics -->
+          <ul class="nav nav-pills nav-pills-editor">
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="#">Module Topic<button class="btn btn-edit ml-2">Edit</button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center is-selected is-editing" href="#">Editing Topic
+                <button class="btn btn-okay ml-2">Confirm</button>
+                <button class="btn btn-delete">&times;</button>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center is-selected" href="#">Selected Topic<button class="btn btn-edit ml-2">Edit</button></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link d-flex align-items-center" href="#">
+                Add topic <button class="btn btn-add ml-2" type="submit">+</button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

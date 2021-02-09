@@ -1,0 +1,64 @@
+@media only screen and (min-width: 768px) {
+  .full-h {
+    min-height: 100vh;
+  }
+}
+
+.alert.alert-success {
+  background-color: #e8ffff;
+  border-color: #a6f6f1;
+  color: #0d7377;
+}
+
+.form-control-dropdown {
+  appearance: none;
+  background-color: #eee;
+  background-image: url('/images/icon-arrow-down.svg');
+  background-position: center right 0.75rem;
+  background-size: 18px;
+  background-repeat: no-repeat;
+  border: 1px solid #dee2e6;
+  border-radius: 0;
+  box-shadow: 0;
+  padding: 20px .75rem;
+  width: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.form-control-dropdown:focus {
+  background-color: #fff;
+  border-color: #32e0c4;
+  box-shadow: none;
+  outline: none;
+}
+
+.form-control[type='date'] {
+  height: auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.btn-primary {
+  background-color: #0d7377;
+  border: 0;
+  border-radius: 50px;
+  font-weight: 700;
+}
+
+.btn-primary,
+.btn-link {
+  padding: 15px 30px;
+}
+
+.btn-primary:hover {
+  background-color: #32e0c4;
+  color: #212121;
+}
+
+.btn-link {
+  color: #0d7377;
+}
+
+.btn-link:hover {
+  color: #0d7377;
+}

@@ -1,0 +1,176 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;800&display=swap');
+
+body {
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.45;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 992px) {
+  .container-sm {
+    max-width: 800px;
+  }
+}
+
+a {
+  color: #0d7377;
+}
+
+a:hover {
+  color: #0d7377;
+}
+
+.navbar-brand {
+  color: #212121;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.navbar-brand:hover {
+  color: #0d7377;
+}
+
+.c-teal-light {
+  color: #32e0c4;
+}
+
+.navbar-nav {
+  font-weight: 700;
+  font-weight: 16px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #212121;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: #32e0c4;
+  position: relative;
+}
+
+.nav-item .active:after {
+  background-color: #32e0c4;
+  border-radius: 50px;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 4px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.form-control {
+  background-color: #eee;
+  border-color: #dee2e6;
+  border-radius: 0;
+  color: #212121;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  transition: all 0.4s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #32e0c4;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-add,
+.btn-delete,
+.btn-edit {
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
+}
+
+.btn-add {
+  background-color: #0d7377;
+  color: #fff;
+  border: 0;
+}
+
+.btn-add:hover,
+.btn-add:focus {
+  background-color: #32e0c4;
+  color: #212121;
+}
+
+.btn-add:focus {
+  outline: none;
+}
+
+.btn-delete {
+  appearance: none;
+  border: 0;
+  box-shadow: 0;
+}
+
+
+/* Global selected and editing styles */
+.is-selected {
+   color: #fff;
+   background-color: #0d7377;
+ }
+
+ .is-selected .btn-delete,
+ .table tr.is-selected .course-name {
+   color: inherit;
+ }
+
+ .is-selected .course-name {
+   background-image: url('../images/icon-description-white.svg');
+ }
+
+ .is-editing {
+   color: #212121;
+   background-color: #eee;
+   font-weight: 400 !important;
+ }
+
+.is-selected .btn-edit:after {
+    background-image: url('../images/icon-edit-white.svg');
+  }
+/* I use this snippet to create screen reader accessible icons.
+Example can be found here: https://github.com/alecherryy/react-portfolio/blob/405559c81ab7aa860ee5002e291a120a75c14b7d/src/components/SocialMedia/styles.scss#L114-L120 */
+.btn-okay,
+.btn-edit {
+  display: block;
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
+  position: relative;
+}
+
+.btn-edit:after,
+.btn-okay:after {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.btn-okay:after {
+  background-image: url('../images/icon-okay.svg');
+}
+
+.btn-edit:after {
+  background-image: url('../images/icon-edit.svg');
+}

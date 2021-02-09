@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Manager | Register</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="register.style.client.css">
+</head>
+<body>
+  <main class="container container-sm">
+    <section class="row align-items-center justify-content-between pt-4 pb-4 full-h">
+      <div class="col-12 col-md-4">
+        <h1>Welcome.</h1>
+        <p>To create an account, choose a username and password.</p>
+      </div>
+      <form class="col-12 col-md-6">
+        <!-- Use aria attribute to label input fields-->
+        <input class="form-control mb-3" type="text" id="username" placeholder="Username" aria-label="Username">
+        <!-- Use aria attribute to label input fields-->
+        <input class="form-control mb-3" type="password" id="password" placeholder="Password" aria-label="Password">
+        <input class="form-control mb-3" type="password" id="confirmPassword" placeholder="Confirm Password" aria-label="Confirm Password">
+        <a href="/profile/profile.template.client.html" class="btn btn-primary btn-inline-block mb-3">Create an account</a>
+        <a href="/" class="btn btn-link btn-inline-block float-right">Cancel</a>
+        <p class="mt-1"><small>Already have an account? <a href="../login/login.template.client.html">Login.</a></small></p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

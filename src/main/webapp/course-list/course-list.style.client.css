@@ -1,0 +1,48 @@
+.table {
+  border: 1px solid #dee2e6;
+  border-radius: 50px;
+  color: #333;
+}
+
+.table td,
+.table th {
+  vertical-align: baseline;
+}
+
+.is-editing .course-name {
+  background-image: url('../images/icon-description.svg');
+  font-weight: 400;
+}
+
+
+.table thead {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table thead th {
+  border: 0;
+}
+
+table td.course-name {
+  background-image: url('../images/icon-description.svg');
+  background-position: left 10px center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  color: #0d7377;
+  font-weight: 700;
+  padding-left: 40px;
+}
+
+@media only screen and (max-width: 992px) {
+  .table-course th:nth-child(2),
+  .table-course th:nth-child(3),
+  .table-course td:nth-child(2),
+  .table-course td:nth-child(3) {
+    display: none;
+  }
+}
+
+
+.table tr:nth-child(even) {
+  background-color: #e8ffff;
+}

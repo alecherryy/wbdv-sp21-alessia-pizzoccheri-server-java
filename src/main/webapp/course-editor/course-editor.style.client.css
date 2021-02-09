@@ -1,0 +1,72 @@
+.list-group-item {
+  font-weight: 700;
+}
+
+.nav-tabs-editor,
+.nav-pills-editor {
+  font-weight: 700;
+}
+
+.nav-tabs-editor .nav-link,
+.nav-pills-editor .nav-link {
+  font-size: 14px;
+  transition: all 0.4s ease-in-out;
+}
+
+.nav-pills-editor .nav-item {
+  margin-right: 10px;
+}
+
+.nav-tabs-editor .nav-link {
+  border: 1px solid #eee;
+}
+
+.nav-pills-editor .nav-link {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.nav-tabs-editor .nav-link:not(.is-selected),
+.nav-pills-editor .nav-link:not(.is-selected) {
+  color: #212121;
+}
+
+.nav-tabs-editor .nav-link:not(.is-selected):hover {
+  background-color: #e8ffff;
+}
+
+.nav-pills-editor .nav-link:not(.is-selected):hover {
+  color: #0d7377;
+}
+
+.nav-tabs-editor .nav-link.is-selected:hover {
+  border: 1px solid #0d7377;
+  color: #fff;
+}
+
+.nav-pills-editor .nav-link.is-selected:hover {
+  color: #fff;
+}
+
+.nav-tabs-editor .nav-link.is-editing:hover {
+  background-color: #eee;
+  border: 1px solid #eee;
+  color: #212121;
+}
+
+.nav-pills-editor .nav-link.is-editing:hover {
+  background-color: #eee;
+  color: #212121;
+}
+
+.nav-tabs-editor .nav-link .btn,
+.nav-pills-editor .nav-link .btn {
+  height: 30px;
+  width: 30px;
+  padding: 0;
+}
+
+.nav-tabs-editor .nav-link .btn:after,
+.nav-pills-editor .nav-link .btn:after {
+  background-size: 20px;
+}
