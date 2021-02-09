@@ -1,0 +1,37 @@
+.table {
+  border: 1px solid #dee2e6;
+  border-radius: 50px;
+  color: #333;
+}
+
+.table thead th {
+  vertical-align: middle;
+}
+
+.form-control {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.form-control-dropdown {
+  min-width: 200px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.table thead {
+  border-bottom: 1px solid #dee2e6;
+}
+
+.table thead th {
+  border: 0;
+}
+
+.table thead tr:first-child {
+  background-color: #0d7377;
+  color: #fff;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #e8ffff;
+}
