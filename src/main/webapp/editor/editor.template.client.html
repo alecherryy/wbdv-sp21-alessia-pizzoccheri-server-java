@@ -5,7 +5,7 @@
   <title>Course Manager | Editor</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="course-editor.style.client.css">
+  <link rel="stylesheet" href="editor.style.client.css">
 </head>
 <body>
   <div class="container-fluid d-flex align-items-center justify-content-between pt-3 pb-3 mb-5">
@@ -30,7 +30,7 @@
             <a class="nav-link pb-3" href="/course-list/course-list.template.client.html">Course List</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link pb-3 active" href="/course-editor/course-editor.template.client.html">Course Editor</a>
+            <a class="nav-link pb-3 active" href="/editor/editor.template.client.html">Editor</a>
           </li>
         </ul>
       </div>
@@ -65,13 +65,13 @@
               Editing Module 6...
               <div class="d-flex">
                 <button class="btn btn-okay">Confirm</button>
-                <button class="btn btn-delete">&times;</button>
+                <button class="btn btn-delete">Delete</button>
               </div>
             </li>
             <li class="d-flex align-items-center justify-content-between list-group-item">
               <form class="d-flex align-items-center w-100">
                 <input class="form-control form-control-add" type="text" placeholder="Add a new module" aria-label="New Course Name">
-                <button class="btn btn-add ml-2" type="submit">+</button>
+                <button class="btn btn-add ml-2" type="submit">Add</button>
               </form>
             </li>
           </ul>
@@ -81,7 +81,7 @@
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center is-selected is-editing" href="#">Editing Section
                 <button class="btn btn-okay ml-2">Confirm</button>
-                <button class="btn btn-delete">&times;</button>
+                <button class="btn btn-delete">Delete</button>
               </a>
             </li>
             <li class="nav-item">
@@ -92,7 +92,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center" href="#">
-                Add section <button class="btn btn-add ml-2" type="submit">+</button>
+                Add section <button class="btn btn-add ml-2" type="submit">Add</button>
               </a>
             </li>
           </ul>
@@ -104,7 +104,7 @@
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center is-selected is-editing" href="#">Editing Topic
                 <button class="btn btn-okay ml-2">Confirm</button>
-                <button class="btn btn-delete">&times;</button>
+                <button class="btn btn-delete">Delete</button>
               </a>
             </li>
             <li class="nav-item">
@@ -112,7 +112,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link d-flex align-items-center" href="#">
-                Add topic <button class="btn btn-add ml-2" type="submit">+</button>
+                Add topic <button class="btn btn-add ml-2" type="submit">Add</button>
               </a>
             </li>
           </ul>

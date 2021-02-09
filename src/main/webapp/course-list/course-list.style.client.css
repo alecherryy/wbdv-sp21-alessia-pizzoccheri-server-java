@@ -6,7 +6,7 @@
 
 .table td,
 .table th {
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 .is-editing .course-name {
