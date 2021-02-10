@@ -40,3 +40,7 @@
 .js-actions {
   display: flex;
 }
+
+.is-editing .btn-edit:after {
+  background-image: url('../images/icon-edit-black.svg') !important;
+}

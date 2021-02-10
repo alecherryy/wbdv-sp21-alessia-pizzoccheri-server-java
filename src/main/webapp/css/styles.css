@@ -117,32 +117,33 @@ a:hover {
 
 /* Global selected and editing styles */
 .is-selected {
-   color: #fff;
-   background-color: #0d7377;
- }
-
-
- .table tr.is-selected .course-name {
-   color: inherit;
- }
-
-.is-selected:not(.is-editing) .btn-delete:after {
-  background-image: url('../images/icon-delete-white.svg');
+  color: #fff !important;
+  background-color: #0d7377 !important;
 }
 
- .is-selected .course-name {
-   background-image: url('../images/icon-description-white.svg');
- }
 
- .is-editing {
-   color: #212121;
-   background-color: #eee;
-   font-weight: 400 !important;
- }
+.table tr.is-selected .course-name {
+  color: inherit;
+}
+
+.is-selected:not(.is-editing) .btn-delete:after {
+  background-image: url('../images/icon-delete-white.svg') !important;
+}
+
+.is-selected .course-name {
+  background-image: url('../images/icon-description-white.svg') !important;
+}
 
 .is-selected .btn-edit:after {
-    background-image: url('../images/icon-edit-white.svg');
-  }
+  background-image: url('../images/icon-edit-white.svg') !important;
+}
+
+.is-editing {
+   color: #212121 !important;
+   background-color: #eee !important;
+   font-weight: 400 !important !important;
+}
+
 
 /* I use this snippet to create screen reader accessible icons.
 Example can be found here: https://github.com/alecherryy/react-portfolio/blob/405559c81ab7aa860ee5002e291a120a75c14b7d/src/components/SocialMedia/styles.scss#L114-L120 */

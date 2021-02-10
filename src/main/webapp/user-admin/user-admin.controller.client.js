@@ -23,9 +23,6 @@ function createUser() {
   // add new user to array
   users.push(user);
 
-  // reset input fields
-  $('.table').find('.form-control').val('');
-
   // re-render users
   renderUsers(users);
 }
@@ -37,6 +34,42 @@ function deleteUser(e) {
   // get index
   var index = e.target.dataset.index;
   users.splice(index, 1);
+
+  // re-render users
+  renderUsers(users);
+}
+
+/**
+* SELECT USER
+*/
+var index = null;
+function selectUser(e) {
+  index = e.target.dataset.index;
+  var selectedUser = users[index];
+
+  $usernameFld.val(selectedUser.username);
+  $passwordFld.val(selectedUser.password);
+  $firstNameFld.val(selectedUser.first_name);
+  $lastNameFld.val(selectedUser.last_name);
+  $roleFld.val(selectedUser.role);
+
+  // add classes
+  $(e.target).parents('tr').addClass('is-selected is-editing');
+}
+
+/**
+* UPDATE USER
+*/
+function updateUser(e) {
+  // get index
+  var id = index;
+
+  // update user
+  users[id].username = $usernameFld.val();
+  users[id].password = $passwordFld.val();
+  users[id].first_name = $firstNameFld.val();
+  users[id].last_name = $lastNameFld.val();
+  users[id].role = $roleFld.val();
 
   // re-render users
   renderUsers(users);
@@ -70,12 +103,17 @@ function renderUsers(all) {
   }
 
   // bind click events
-//  $('.btn-edit').click(updateUser);
+  $('.btn-edit').click(selectUser);
   $('.btn-delete').click(deleteUser);
+
+  // reset input fields
+  $('.table').find('.form-control').val('');
+  $('.table').find('.form-control-dropdown').val('FACULTY');
 }
 
 function main() {
   $tBody = $('#usersTable');
+  $editBtn = $('.btn-okay');
   $createBtn = $('.btn-add');
   $usernameFld = $('#usernameFld');
   $passwordFld = $('#passwordFld');
@@ -87,7 +125,10 @@ function main() {
     createUser();
   })
 
-  $removeBtn = $('.btn-delete');
+  $editBtn.click((e) => {
+    updateUser(e);
+  })
+
 
   renderUsers(users);
 }
