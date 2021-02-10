@@ -4,7 +4,8 @@
   color: #333;
 }
 
-.table thead th {
+.table thead th,
+.table tbody td {
   vertical-align: middle;
 }
 
@@ -34,4 +35,8 @@
 
 .table tbody tr:nth-child(odd) {
   background-color: #e8ffff;
+}
+
+.js-actions {
+  display: flex;
 }
