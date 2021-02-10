@@ -53,7 +53,7 @@ function selectUser(e) {
   $lastNameFld.val(selectedUser.last_name);
   $roleFld.val(selectedUser.role);
 
-  // add classes
+  // add classes to selected row
   $(e.target).parents('tr').addClass('is-selected is-editing');
 }
 
@@ -111,6 +111,7 @@ function renderUsers(all) {
   $('.table').find('.form-control-dropdown').val('FACULTY');
 }
 
+// declare main() function used to evoke rest of functions
 function main() {
   $tBody = $('#usersTable');
   $editBtn = $('.btn-okay');
@@ -128,7 +129,6 @@ function main() {
   $editBtn.click((e) => {
     updateUser(e);
   })
-
 
   renderUsers(users);
 }
