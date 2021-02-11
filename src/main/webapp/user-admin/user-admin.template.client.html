@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Manager | Admin</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href="user-admin.style.client.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/services/user.service.client.js"></script>
+  <script src="user-admin.controller.client.js"></script>
+</head>
+<body>
+  <div class="container-fluid d-flex align-items-center justify-content-between pt-3 pb-3 mb-5">
+    <a class="navbar-brand" href="/">Course<br><span class="c-teal-light d-block ml-4">Manager</span></a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link pb-3" href="/login/login.template.client.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pb-3" href="/register/register.template.client.html">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pb-3" href="/profile/profile.template.client.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pb-3" href="/course-list/course-list.template.client.html">Course List</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pb-3" href="/editor/editor.template.client.html">Editor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link pb-3 active" href="/user-admin/user-admin.template.client.html">Admin</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <main>
+    <div class="container container-sm">
+      <h1>User Admin</h1>
+    </div>
+    <div class="container">
+      <table class="table table-course mt-5">
+        <thead>
+          <tr>
+            <th class="py-3" scope="col">Username</th>
+            <th class="py-3" scope="col">Password</th>
+            <th class="py-3" scope="col">First Name</th>
+            <th class="py-3" scope="col">Last Name</th>
+            <th class="py-3" scope="col">Role</th>
+            <th class="py-3" scope="col">&nbsp;</th>
+          </tr>
+          <tr>
+            <th>
+              <input id="usernameFld" class="form-control" placeholder="Username" />
+            </th>
+            <th>
+              <input id="passwordFld" class="form-control"  placeholder="Password" />
+            </th>
+            <th>
+              <input id="firstNameFld" class="form-control" placeholder="First Name" />
+            </th>
+            <th>
+              <input id="lastNameFld" class="form-control" placeholder="Last Name" />
+            </th>
+            <th>
+              <select id="roleFld" class="form-control-dropdown">
+                <option value="FACULTY" selected>Faculty</option>
+                <option value="STUDENT">Student</option>
+                <option value="ADMIN">Admin</option>
+              </select>
+            </th>
+            <th>
+              <span class="js-actions">
+                <button class="btn btn-add">Add</button>
+                <button class="btn btn-okay">Okay</button>
+              </span>
+            </th>
+          </tr>
+        </thead>
+        <tbody id="usersTable">
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>
