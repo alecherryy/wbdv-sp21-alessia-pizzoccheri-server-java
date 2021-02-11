@@ -3,7 +3,7 @@ var $firstNameFld, $lastNameFld, $roleFld;
 var $removeBtn, $editBtn, $createBtn;
 var $userRowTemplate, $tBody;
 var users;
-// var userService = new AdminUserServiceClient();
+var userService = new AdminUserServiceClient();
 
 var users = [];
 
@@ -20,11 +20,14 @@ function createUser() {
     role: $roleFld.val()
   }
 
-  // add new user to array
-  users.push(user);
+  userService.createUser(user)
+  .then(function (user) {
+    // add new user to array
+    users.push(user)
 
-  // re-render users
-  renderUsers(users);
+    // re-render users
+    renderUsers(users);
+  })
 }
 
 /**
@@ -33,10 +36,14 @@ function createUser() {
 function deleteUser(e) {
   // get index
   var index = e.target.dataset.index;
-  users.splice(index, 1);
+  var id = users[index]._id;
 
-  // re-render users
-  renderUsers(users);
+  userService.deleteUser(id).then(function(status) {
+    users.splice(index, 1)
+
+    // re-render users
+    renderUsers(users)
+  })
 }
 
 /**
@@ -130,7 +137,12 @@ function main() {
     updateUser(e);
   })
 
-  renderUsers(users);
+  userService.findAllUsers().then(function(actualUsers) {
+    users = actualUsers;
+    console.log(users);
+    renderUsers(users);
+  });
+
 }
 
 $(main);
