@@ -11,7 +11,7 @@ var users = [];
 * CREATE NEW USER
 */
 function createUser() {
-  // DOM el selector
+  // new user JSON object
   var user = {
     username: $usernameFld.val(),
     password: $passwordFld.val(),
@@ -36,6 +36,7 @@ function createUser() {
 function deleteUser(e) {
   // get index
   var userIndex = e.target.dataset.index;
+  // get user id
   var id = users[userIndex]._id;
 
   userService.deleteUser(id).then(function(status) {
@@ -52,9 +53,10 @@ function deleteUser(e) {
 var selectedUser = null
 
 function selectUser(e) {
-
+  // get index
   var index = e.target.dataset.index;
 
+  // get selected user
   selectedUser = users[index]
 
   $usernameFld.val(selectedUser.username)
@@ -71,7 +73,8 @@ function selectUser(e) {
 * UPDATE USER
 */
 function updateUser(e) {
-  // get index
+
+  // update user field values
   selectedUser.username = $usernameFld.val();
   selectedUser.password = $passwordFld.val();
   selectedUser.first_name = $firstNameFld.val();
@@ -80,7 +83,9 @@ function updateUser(e) {
 
   userService.updateUser(selectedUser._id, selectedUser)
     .then(function (status) {
+      // find index of target user
       var index = users.findIndex(user => user._id === selectedUser._id)
+      // update user
       users[index] = selectedUser
 
       // re-render users
@@ -98,6 +103,7 @@ function renderUsers(all) {
   // create table row for each user and append to form
   for (var i = 0; i < all.length; i++) {
     var user = all[i];
+    // generate HTML
     $tBody.prepend(`
       <tr>
         <td>${user.username}</td>
@@ -135,14 +141,17 @@ function main() {
   $lastNameFld = $('#lastNameFld');
   $roleFld = $('#roleFld');
 
+  // bind click event
   $createBtn.click(() => {
     createUser();
   })
 
+  // bind click event
   $editBtn.click((e) => {
     updateUser(e);
   })
 
+  // generate all users
   userService.findAllUsers().then(function(actualUsers) {
     users = actualUsers;
 
