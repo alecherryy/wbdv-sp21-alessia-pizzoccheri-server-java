@@ -39,7 +39,7 @@ function deleteUser(e) {
   var id = users[userIndex]._id;
 
   userService.deleteUser(id).then(function(status) {
-    users.splice(index, 1)
+    users.splice(userIndex, 1)
 
     // re-render users
     renderUsers(users)
