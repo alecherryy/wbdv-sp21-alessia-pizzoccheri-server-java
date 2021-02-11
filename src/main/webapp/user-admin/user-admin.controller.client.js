@@ -35,8 +35,8 @@ function createUser() {
 */
 function deleteUser(e) {
   // get index
-  var index = e.target.dataset.index;
-  var id = users[index]._id;
+  var userIndex = e.target.dataset.index;
+  var id = users[userIndex]._id;
 
   userService.deleteUser(id).then(function(status) {
     users.splice(index, 1)
@@ -49,16 +49,19 @@ function deleteUser(e) {
 /**
 * SELECT USER
 */
-var index = null;
-function selectUser(e) {
-  index = e.target.dataset.index;
-  var selectedUser = users[index];
+var selectedUser = null
 
-  $usernameFld.val(selectedUser.username);
-  $passwordFld.val(selectedUser.password);
-  $firstNameFld.val(selectedUser.first_name);
-  $lastNameFld.val(selectedUser.last_name);
-  $roleFld.val(selectedUser.role);
+function selectUser(e) {
+
+  var index = e.target.dataset.index;
+
+  selectedUser = users[index]
+
+  $usernameFld.val(selectedUser.username)
+  $passwordFld.val(selectedUser.password)
+  $firstNameFld.val(selectedUser.first_name)
+  $lastNameFld.val(selectedUser.last_name)
+  $roleFld.val(selectedUser.role)
 
   // add classes to selected row
   $(e.target).parents('tr').addClass('is-selected is-editing');
@@ -69,17 +72,20 @@ function selectUser(e) {
 */
 function updateUser(e) {
   // get index
-  var id = index;
+  selectedUser.username = $usernameFld.val();
+  selectedUser.password = $passwordFld.val();
+  selectedUser.first_name = $firstNameFld.val();
+  selectedUser.last_name = $lastNameFld.val();
+  selectedUser.role = $roleFld.val();
 
-  // update user
-  users[id].username = $usernameFld.val();
-  users[id].password = $passwordFld.val();
-  users[id].first_name = $firstNameFld.val();
-  users[id].last_name = $lastNameFld.val();
-  users[id].role = $roleFld.val();
+  userService.updateUser(selectedUser._id, selectedUser)
+    .then(function (status) {
+      var index = users.findIndex(user => user._id === selectedUser._id)
+      users[index] = selectedUser
 
-  // re-render users
-  renderUsers(users);
+      // re-render users
+      renderUsers(users)
+    })
 }
 
 /**
@@ -139,7 +145,8 @@ function main() {
 
   userService.findAllUsers().then(function(actualUsers) {
     users = actualUsers;
-    console.log(users);
+
+    // render users
     renderUsers(users);
   });
 
