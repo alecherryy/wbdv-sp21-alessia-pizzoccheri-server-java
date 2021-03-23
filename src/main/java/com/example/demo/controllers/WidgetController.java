@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -29,7 +30,7 @@ public class WidgetController {
      * @return the new widget
      */
     @PostMapping("/api/topics/{tid}/widgets")
-    public Widget createWidget(@PathVariable("tid") String tid, Widget w) {
+    public Widget createWidget(@PathVariable("tid") String tid, @RequestBody Widget w) {
         return service.createWidget(w);
     }
 
