@@ -16,10 +16,10 @@ public class WidgetService {
     private List<Widget> widgets = new ArrayList<Widget>();
 
     {
-        Widget w1 = new Widget(123l, "Widget 1", "id", 1,
+        Widget w1 = new Widget(123l, "Widget 1", "604691acb2d531001729e262", 1,
                 "HEADING", "#", 1, "", 0, 0,
                 "source", true, "Widget Title", "", "Some value");
-        Widget w2 = new Widget(234l, "Widget 2", "id", 2,
+        Widget w2 = new Widget(234l, "Widget 2", "604691acb2d531001729e262", 2,
                 "HEADING", "#", 2, "This is a subtitle", 0, 0,
                 "source", true, "", "", "Some value");
         widgets.add(w1);

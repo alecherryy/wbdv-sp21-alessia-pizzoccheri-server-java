@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,7 +29,7 @@ public class WidgetController {
      * @return the new widget
      */
     @PostMapping("/api/topics/{tid}/widgets")
-    public Widget createWidget(String tid, Widget w) {
+    public Widget createWidget(@PathVariable("tid") String tid, Widget w) {
         return service.createWidget(w);
     }
 
@@ -48,7 +49,7 @@ public class WidgetController {
      * @return all widgets
      */
     @GetMapping("/api/topics/{tid}/widgets")
-    public List<Widget> findWidgetByTopic(String tid) {
+    public List<Widget> findWidgetByTopic(@PathVariable("tid") String tid) {
         return service.findWidgetByTopic(tid);
     }
 
@@ -58,7 +59,7 @@ public class WidgetController {
      * @return the widget
      */
     @GetMapping("/api/widgets/{wid}")
-    public Widget findWidgetById(Long wid) {
+    public Widget findWidgetById(@PathVariable("wid") Long wid) {
         return service.findWidgetById(wid);
     }
 
@@ -68,7 +69,7 @@ public class WidgetController {
      * @return 1 if operation succeeds, otherwise return 0
      */
     @DeleteMapping("/api/widgets/{wid}")
-    public int deleteWidget(Long wid) {
+    public int deleteWidget(@PathVariable("wid") Long wid) {
         return service.deleteWidget(wid);
     }
 
@@ -78,7 +79,7 @@ public class WidgetController {
      * @return the updated widget
      */
     @PutMapping("/api/widgets/{wid}")
-    public Widget updateWidget(Long wid, Widget widget) {
+    public Widget updateWidget(@PathVariable("wid") Long wid, Widget widget) {
         return service.updateWidget(wid, widget);
     }
 }
