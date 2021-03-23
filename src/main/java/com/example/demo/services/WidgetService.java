@@ -16,21 +16,6 @@ import java.util.stream.Collectors;
 public class WidgetService {
     private List<Widget> widgets = new ArrayList<Widget>();
 
-    {
-        Widget w1 = new Widget(123l, "Widget 1", "604691acb2d531001729e262", 1,
-                "HEADING", "#", 1, "Widget Title", 0, 0,
-                "source", true, "", "", "Some value");
-        Widget w2 = new Widget(234l, "Widget 2", "604691acb2d531001729e262", 2,
-                "HEADING", "#", 2, "This is a subtitle", 0, 0,
-                "source", true, "", "", "Some value");
-        Widget w3 = new Widget(345l, "Widget 3", "604691acb2d531001729e262", 3,
-                "PARAGRAPH", "#", 0, "Lorem ipsum dolor sit amet, an consulatu intellegam duo. Est in nostro minimum omittantur, ne adhuc semper efficiendi est. Et phaedrum neglegentur mel, sed ea postea perpetua aliquando. Ut nam primis noster labores, vel te verear scripserit. Illud minimum id vis, dolores incorrupte an nec, te quo omnes doctus.", 0, 0,
-                "source", true, "", "", "Some value");
-        widgets.add(w1);
-        widgets.add(w2);
-        widgets.add(w3);
-    }
-
     /**
      * Method to create a new Widget
      *
