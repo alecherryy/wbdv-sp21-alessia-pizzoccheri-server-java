@@ -18,9 +18,12 @@ public class WidgetService {
     {
         Widget w1 = new Widget(123l, "Widget 1", "id", 1,
                 "HEADING", "#", 1, "", 0, 0,
+                "source", true, "Widget Title", "", "Some value");
+        Widget w2 = new Widget(234l, "Widget 2", "id", 2,
+                "HEADING", "#", 2, "This is a subtitle", 0, 0,
                 "source", true, "", "", "Some value");
-
         widgets.add(w1);
+        widgets.add(w2);
     }
 
     /**
