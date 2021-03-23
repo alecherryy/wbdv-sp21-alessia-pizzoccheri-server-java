@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * This class represents a WidgetService object.
@@ -22,7 +23,7 @@ public class WidgetService {
         Widget w2 = new Widget(234l, "Widget 2", "604691acb2d531001729e262", 2,
                 "HEADING", "#", 2, "This is a subtitle", 0, 0,
                 "source", true, "", "", "Some value");
-        Widget w3 = new Widget(234l, "Widget 3", "604691acb2d531001729e262", 3,
+        Widget w3 = new Widget(345l, "Widget 3", "604691acb2d531001729e262", 3,
                 "PARAGRAPH", "#", 0, "Lorem ipsum dolor sit amet, an consulatu intellegam duo. Est in nostro minimum omittantur, ne adhuc semper efficiendi est. Et phaedrum neglegentur mel, sed ea postea perpetua aliquando. Ut nam primis noster labores, vel te verear scripserit. Illud minimum id vis, dolores incorrupte an nec, te quo omnes doctus.", 0, 0,
                 "source", true, "", "", "Some value");
         widgets.add(w1);
@@ -61,7 +62,7 @@ public class WidgetService {
     public List<Widget> findWidgetByTopic(String topicId) {
 
         // return filtered list
-        return (ArrayList<Widget>) widgets.stream().filter(w -> w.getTopicId().equals(topicId));
+        return widgets.stream().filter(w -> w.getTopicId().equals(topicId)).collect(Collectors.toList());
     }
 
     /**
@@ -71,7 +72,7 @@ public class WidgetService {
      */
     public Widget findWidgetById(Long id) {
         // filter widgets
-        ArrayList<Widget> res = (ArrayList<Widget>) widgets.stream().filter(w -> w.getId().equals(id));
+        List<Widget> res = widgets.stream().filter(w -> w.getId().equals(id)).collect(Collectors.toList());
 
         // return first item of the filtered list
         return res.get(0);
