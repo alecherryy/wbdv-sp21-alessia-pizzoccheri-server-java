@@ -5,7 +5,7 @@ package com.example.demo.models;
  * This class represents a Widget object.
  */
 public class Widget {
-    private Integer id;
+    private Long id;
     private String name;
     private String topicID;
     private Integer widgetOrder;
@@ -24,7 +24,7 @@ public class Widget {
     /**
      * Class constructor.
      */
-    public Widget(Integer id, String name, String topicID, Integer widgetOrder, String type, String url,
+    public Widget(Long id, String name, String topicID, Integer widgetOrder, String type, String url,
                   Integer size, String text, Integer width, Integer height, String src,
                   Boolean ordered, String cssClass, String style, String value) {
         this.id = id;
@@ -54,14 +54,14 @@ public class Widget {
      *
      * @return the id
      */
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
     /**
      * Setter method.
      */
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -86,14 +86,14 @@ public class Widget {
      *
      * @return the id
      */
-    public String getTopicID() {
+    public String getTopicId() {
         return topicID;
     }
 
     /**
      * Setter method.
      */
-    public void setTopicID(String topicID) {
+    public void setTopicId(String topicID) {
         this.topicID = topicID;
     }
 
