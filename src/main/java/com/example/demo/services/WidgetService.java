@@ -2,6 +2,9 @@ package com.example.demo.services;
 
 import com.example.demo.models.Widget;
 
+import org.graalvm.compiler.serviceprovider.ServiceProvider;
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -9,6 +12,7 @@ import java.util.List;
 /**
  * This class represents a WidgetService object.
  */
+@Service
 public class WidgetService {
     private List<Widget> widgets = new ArrayList<Widget>();
 
