@@ -2,7 +2,6 @@ package com.example.demo.services;
 
 import com.example.demo.models.Widget;
 
-import org.graalvm.compiler.serviceprovider.ServiceProvider;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -87,6 +86,24 @@ public class WidgetService {
         }
 
         return 0;
+    }
+
+    /**
+     * Method to update a widget
+     *
+     * @return the updated widget
+     */
+    public Widget updateWidget(Long id, Widget widget) {
+
+        for (Widget w : widgets) {
+            if (widget.getId().equals(id)) {
+
+                w = widget;
+                return w;
+            }
+        }
+
+        return null;
     }
 
 }
