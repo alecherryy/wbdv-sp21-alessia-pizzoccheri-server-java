@@ -7,7 +7,7 @@ package com.example.demo.models;
 public class Widget {
     private Long id;
     private String name;
-    private String topicID;
+    private String topicId;
     private Integer widgetOrder;
     private String type;
     private String url;
@@ -24,12 +24,12 @@ public class Widget {
     /**
      * Class constructor.
      */
-    public Widget(Long id, String name, String topicID, Integer widgetOrder, String type, String url,
+    public Widget(Long id, String name, String topicId, Integer widgetOrder, String type, String url,
                   Integer size, String text, Integer width, Integer height, String src,
                   Boolean ordered, String cssClass, String style, String value) {
         this.id = id;
         this.name = name;
-        this.topicID = topicID;
+        this.topicId = topicId;
         this.widgetOrder = widgetOrder;
         this.type = type;
         this.url = url;
@@ -87,14 +87,14 @@ public class Widget {
      * @return the id
      */
     public String getTopicId() {
-        return topicID;
+        return topicId;
     }
 
     /**
      * Setter method.
      */
-    public void setTopicId(String topicID) {
-        this.topicID = topicID;
+    public void setTopicId(String topicId) {
+        this.topicId = topicId;
     }
 
     /**
