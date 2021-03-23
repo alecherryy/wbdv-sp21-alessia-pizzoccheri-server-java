@@ -22,6 +22,9 @@ public class WidgetService {
         Widget w2 = new Widget(234l, "Widget 2", "604691acb2d531001729e262", 2,
                 "HEADING", "#", 2, "This is a subtitle", 0, 0,
                 "source", true, "", "", "Some value");
+        Widget w3 = new Widget(234l, "Widget 3", "604691acb2d531001729e262", 3,
+                "PARAGRAPH", "#", 0, "Lorem ipsum dolor sit amet, an consulatu intellegam duo. Est in nostro minimum omittantur, ne adhuc semper efficiendi est. Et phaedrum neglegentur mel, sed ea postea perpetua aliquando. Ut nam primis noster labores, vel te verear scripserit. Illud minimum id vis, dolores incorrupte an nec, te quo omnes doctus.", 0, 0,
+                "source", true, "", "", "Some value");
         widgets.add(w1);
         widgets.add(w2);
     }
