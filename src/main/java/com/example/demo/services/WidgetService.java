@@ -17,8 +17,8 @@ public class WidgetService {
 
     {
         Widget w1 = new Widget(123l, "Widget 1", "604691acb2d531001729e262", 1,
-                "HEADING", "#", 1, "", 0, 0,
-                "source", true, "Widget Title", "", "Some value");
+                "HEADING", "#", 1, "Widget Title", 0, 0,
+                "source", true, "", "", "Some value");
         Widget w2 = new Widget(234l, "Widget 2", "604691acb2d531001729e262", 2,
                 "HEADING", "#", 2, "This is a subtitle", 0, 0,
                 "source", true, "", "", "Some value");
@@ -27,6 +27,7 @@ public class WidgetService {
                 "source", true, "", "", "Some value");
         widgets.add(w1);
         widgets.add(w2);
+        widgets.add(w3);
     }
 
     /**
