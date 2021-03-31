@@ -30,8 +30,9 @@ public class WidgetController {
      * @return the new widget
      */
     @PostMapping("/api/topics/{tid}/widgets")
-    public Widget createWidget(@PathVariable("tid") String tid, @RequestBody Widget w) {
-        return service.createWidget(w);
+    public Widget createWidget(@PathVariable("tid") String tid, @RequestBody Widget widget) {
+        widget.setTopicId(tid);
+        return service.createWidget(widget);
     }
 
     /**
@@ -80,7 +81,7 @@ public class WidgetController {
      * @return the updated widget
      */
     @PutMapping("/api/widgets/{wid}")
-    public Widget updateWidget(@PathVariable("wid") Long wid, @RequestBody Widget widget) {
+    public int updateWidget(@PathVariable("wid") Long wid, @RequestBody Widget widget) {
         return service.updateWidget(wid, widget);
     }
 }
