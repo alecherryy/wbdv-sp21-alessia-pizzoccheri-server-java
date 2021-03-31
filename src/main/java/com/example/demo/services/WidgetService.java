@@ -86,17 +86,17 @@ public class WidgetService {
      *
      * @return the updated widget
      */
-    public Widget updateWidget(Long id, Widget widget) {
+    public Integer updateWidget(Long id, Widget widget) {
 
         for (Widget w : widgets) {
-            if (widget.getId().equals(id)) {
+            if (w.getId().equals(id)) {
 
                 w = widget;
-                return w;
+                return 1;
             }
         }
 
-        return null;
+        return 0;
     }
 
 }
