@@ -6,10 +6,9 @@
 *.iml
 *.iws
 
-# Mavena
+# Maven
 log/
 target/
-resources/
 
 # Compiled class file
 *.class
